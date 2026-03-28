@@ -1,0 +1,35 @@
+---
+interface Props {
+  whatsappLink: string;
+}
+
+const { whatsappLink } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-brand-900 text-white">
+  <!-- Subtle gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 opacity-100"></div>
+  <!-- Decorative accent line -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-500 via-accent-400 to-accent-500"></div>
+
+  <div class="relative mx-auto max-w-4xl px-5 py-20 md:py-28 lg:py-36 text-center">
+    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white">
+      5 dias no ar. 5 anos sem se preocupar.
+    </h1>
+
+    <p class="mt-6 md:mt-8 text-lg md:text-xl leading-relaxed text-brand-200 max-w-2xl mx-auto">
+      Site profissional exclusivo para médicos especialistas. Design personalizado, domínio próprio, tudo incluso. Investimento único. Você cuida dos pacientes. Nós cuidamos da sua presença digital.
+    </p>
+
+    <div class="mt-10">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-base md:text-lg font-bold text-brand-900 hover:bg-accent-400 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-accent-300 shadow-lg"
+      >
+        Quero meu site profissional
+      </a>
+    </div>
+  </div>
+</section>

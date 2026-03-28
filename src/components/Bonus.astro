@@ -1,0 +1,43 @@
+---
+const bonuses = [
+  {
+    icon: "🎁",
+    title: "Guia Vitrine",
+    value: "R$297",
+    description: "Como tirar uma foto profissional com seu celular em 10 minutos. Checklist prático com dicas de luz, ângulo e fundo. Sem equipamento especial.",
+  },
+  {
+    icon: "🎁",
+    title: "QR Consultório",
+    value: "R$97",
+    description: "Cartão digital com QR Code que leva direto ao seu site. Deixe na recepção, no cartão de visita, no receituário. O paciente te acha em 1 segundo.",
+  },
+];
+---
+
+<section class="py-20 md:py-28 bg-white fade-in-section">
+  <div class="mx-auto max-w-3xl px-5">
+    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 text-center leading-tight">
+      Bônus inclusos
+    </h2>
+
+    <div class="mt-12 space-y-6">
+      {bonuses.map((bonus) => (
+        <div class="relative bg-gradient-to-br from-accent-500/5 to-accent-400/10 rounded-2xl p-6 md:p-8 border border-accent-500/20">
+          <div class="flex items-start gap-4">
+            <span class="text-3xl shrink-0" aria-hidden="true">{bonus.icon}</span>
+            <div>
+              <div class="flex items-center gap-3 flex-wrap">
+                <h3 class="font-semibold text-lg text-brand-900">{bonus.title}</h3>
+                <span class="inline-block rounded-full bg-accent-500/15 px-3 py-0.5 text-xs font-semibold text-accent-500">
+                  valor: {bonus.value}
+                </span>
+              </div>
+              <p class="mt-2 text-neutral-600 leading-relaxed">{bonus.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

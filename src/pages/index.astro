@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ArgumentoCentral from '../components/ArgumentoCentral.astro';
+import Dores from '../components/Dores.astro';
+import ComoFunciona from '../components/ComoFunciona.astro';
+import JornadaPaciente from '../components/JornadaPaciente.astro';
+import Bundles from '../components/Bundles.astro';
+import Bonus from '../components/Bonus.astro';
+import Preco from '../components/Preco.astro';
+import Garantia from '../components/Garantia.astro';
+import Depoimentos from '../components/Depoimentos.astro';
+import FAQ from '../components/FAQ.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const whatsappLink = "https://wa.me/5531936183611?text=Olá! Quero saber mais sobre o site profissional para médicos.";
+---
+
+<Layout
+  title="Site Profissional para Médicos — Laender Software"
+  description="Site profissional exclusivo para médicos especialistas. Design personalizado, domínio próprio, tudo incluso. No ar em 5 dias, 5 anos de suporte."
+>
+  <Header whatsappLink="https://wa.me/5531936183611?text=Olá! Gostaria de saber mais." />
+
+  <main id="main-content">
+    <Hero whatsappLink={whatsappLink} />
+    <ArgumentoCentral whatsappLink="https://wa.me/5531936183611?text=Olá! Quero meu site profissional." />
+    <Dores whatsappLink="https://wa.me/5531936183611?text=Olá! Quero resolver meu site profissional." />
+    <ComoFunciona whatsappLink="https://wa.me/5531936183611?text=Olá! Quero começar meu site profissional." />
+    <JornadaPaciente />
+    <Bundles />
+    <Bonus />
+    <Preco whatsappLink="https://wa.me/5531936183611?text=Olá! Quero garantir meu site profissional." />
+    <Garantia />
+    <Depoimentos />
+    <FAQ />
+    <CTAFinal whatsappLink="https://wa.me/5531936183611?text=Olá! Quero meu site profissional." />
+  </main>
+
+  <Footer />
+  <WhatsAppButton whatsappLink={whatsappLink} />
+</Layout>

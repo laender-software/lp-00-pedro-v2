@@ -1,0 +1,63 @@
+---
+interface Props {
+  whatsappLink: string;
+}
+
+const { whatsappLink } = Astro.props;
+
+const steps = [
+  {
+    number: "1",
+    title: "Briefing rápido (10-15 minutos)",
+    text: "Responda algumas perguntas sobre sua especialidade e consultório. Sem reuniões, sem formulários extensos. É rápido porque já sabemos o que funciona para médicos.",
+  },
+  {
+    number: "2",
+    title: "Pesquisamos e criamos tudo",
+    text: "Texto profissional, design exclusivo para a sua especialidade, domínio próprio. Você não escreve uma linha, não toma nenhuma decisão técnica. Tudo por conta nossa.",
+  },
+  {
+    number: "3",
+    title: "Site no ar em 5 dias úteis",
+    text: "Seu site profissional funcionando, bonito no celular e no computador. Pronto para compartilhar com pacientes, colegas e em qualquer canal.",
+  },
+  {
+    number: "4",
+    title: "Seu site fica no ar por 5 anos. Sem se preocupar com nada.",
+    text: "Domínio, manutenção, tudo funcionando. Precisa trocar foto, telefone, endereço? Nós fazemos. É só chamar no WhatsApp.",
+  },
+];
+---
+
+<section class="py-20 md:py-28 bg-white fade-in-section">
+  <div class="mx-auto max-w-4xl px-5">
+    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 text-center leading-tight">
+      Do briefing ao site no ar. 5 dias úteis.
+    </h2>
+
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {steps.map((step) => (
+        <div class="relative bg-neutral-50 rounded-2xl p-6 md:p-8 border border-neutral-100 hover:border-brand-200 transition-colors">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-900 text-white font-bold text-sm shrink-0">
+              {step.number}
+            </span>
+            <h3 class="font-semibold text-lg text-brand-900 leading-snug">{step.title}</h3>
+          </div>
+          <p class="text-neutral-600 leading-relaxed">{step.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-brand-900 px-8 py-4 text-base font-bold text-white hover:bg-brand-800 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-brand-500"
+      >
+        Quero começar meu site
+      </a>
+    </div>
+  </div>
+</section>

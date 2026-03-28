@@ -1,0 +1,44 @@
+---
+interface Props {
+  whatsappLink: string;
+}
+
+const { whatsappLink } = Astro.props;
+---
+
+<header
+  id="header"
+  class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200/60 transition-shadow duration-300"
+>
+  <div class="mx-auto max-w-6xl px-5 flex items-center justify-between h-16 md:h-18">
+    <div class="flex flex-col">
+      <span class="font-serif text-lg font-bold text-brand-900 leading-tight">Laender Software</span>
+      <span class="text-xs text-neutral-500 hidden sm:block">Sites profissionais para médicos</span>
+    </div>
+    <a
+      href={whatsappLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 rounded-full bg-brand-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-800 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-brand-500"
+    >
+      Falar no WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 md:h-18" aria-hidden="true"></div>
+
+<script>
+  const header = document.getElementById('header');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 10) {
+      header?.classList.add('shadow-md');
+    } else {
+      header?.classList.remove('shadow-md');
+    }
+    lastScroll = currentScroll;
+  }, { passive: true });
+</script>

@@ -1,0 +1,38 @@
+---
+interface Props {
+  whatsappLink: string;
+}
+
+const { whatsappLink } = Astro.props;
+---
+
+<section class="py-20 md:py-28 bg-white fade-in-section">
+  <div class="mx-auto max-w-3xl px-5 text-center">
+    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 leading-tight">
+      Sua presença digital é como as pessoas te percebem antes de te conhecer.
+    </h2>
+
+    <div class="mt-8 space-y-5 text-lg md:text-xl text-neutral-600 leading-relaxed">
+      <p>
+        Instagram mostra o dia a dia. Mas quando alguém pesquisa seu nome, é o site que transmite autoridade.
+      </p>
+      <p>
+        Paciente indicado, colega que passou seu nome, alguém que viu seu perfil e quer saber mais. Todos vão fazer a mesma coisa: pesquisar seu nome.
+      </p>
+      <p class="font-semibold text-brand-900 text-xl md:text-2xl">
+        O que eles encontram?
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-brand-900 px-8 py-4 text-base font-bold text-white hover:bg-brand-800 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-brand-500"
+      >
+        Começar agora
+      </a>
+    </div>
+  </div>
+</section>

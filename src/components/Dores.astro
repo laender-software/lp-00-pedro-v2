@@ -1,0 +1,68 @@
+---
+interface Props {
+  whatsappLink: string;
+}
+
+const { whatsappLink } = Astro.props;
+
+const dores = [
+  {
+    icon: "🔍",
+    title: "Paciente pesquisa seu nome e não encontra um site profissional",
+    text: "Quem não é visto não é lembrado. A percepção sobre você começa antes da primeira consulta.",
+  },
+  {
+    icon: "📱",
+    title: "Instagram mostra o dia a dia. O site mostra quem você é.",
+    text: "Sua história, sua formação, seus diferenciais — quando alguém quer saber de verdade, é o site que responde.",
+  },
+  {
+    icon: "⏰",
+    title: "Você sabe que precisa resolver isso, mas a rotina não permite",
+    text: "Reuniões com agência, aprovações intermináveis, semanas de espera. Briefing de 10-15 minutos. Isso é tudo o que precisamos.",
+  },
+  {
+    icon: "🏥",
+    title: "Seu colega já tem site. E o seu?",
+    text: "A decisão entre ser encontrado e ser ignorado cabe a você.",
+  },
+  {
+    icon: "💻",
+    title: "Já tentou agência, sobrinho ou template — nenhum ficou à altura",
+    text: "Site genérico diminui sua autoridade. Você merece algo feito para quem você é.",
+  },
+];
+---
+
+<section class="py-20 md:py-28 bg-neutral-50 fade-in-section">
+  <div class="mx-auto max-w-4xl px-5">
+    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 text-center leading-tight">
+      Você é referência na sua especialidade. Seu digital deveria mostrar isso.
+    </h2>
+
+    <div class="mt-14 space-y-6">
+      {dores.map((dor) => (
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow border border-neutral-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl mt-0.5 shrink-0" aria-hidden="true">{dor.icon}</span>
+            <div>
+              <h3 class="font-semibold text-lg text-brand-900 leading-snug">{dor.title}</h3>
+              <p class="mt-2 text-neutral-600 leading-relaxed">{dor.text}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-brand-900 px-8 py-4 text-base font-bold text-white hover:bg-brand-800 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-brand-500"
+      >
+        Começar em 10 minutos
+      </a>
+    </div>
+  </div>
+</section>
