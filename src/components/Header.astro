@@ -8,37 +8,60 @@ const { whatsappLink } = Astro.props;
 
 <header
   id="header"
-  class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200/60 transition-shadow duration-300"
+  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border transition-shadow duration-300 h-16"
 >
-  <div class="mx-auto max-w-6xl px-5 flex items-center justify-between h-16 md:h-18">
-    <div class="flex flex-col">
-      <span class="font-serif text-lg font-bold text-brand-900 leading-tight">Laender Software</span>
-      <span class="text-xs text-neutral-500 hidden sm:block">Sites profissionais para médicos</span>
-    </div>
+  <div class="mx-auto max-w-5xl px-6 flex items-center justify-between h-full">
+    <span class="font-bold text-brand">Pedro Laender</span>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#como-funciona" class="text-sm text-muted hover:text-brand transition-colors">Como funciona</a>
+      <a href="#bundles" class="text-sm text-muted hover:text-brand transition-colors">O que inclui</a>
+      <a href="#preco" class="text-sm text-muted hover:text-brand transition-colors">Investimento</a>
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark transition-colors btn-pulse"
+      >
+        Quero meu site
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+      <span class="w-5 h-0.5 bg-text"></span>
+      <span class="w-5 h-0.5 bg-text"></span>
+      <span class="w-5 h-0.5 bg-text"></span>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-border px-6 py-4 space-y-3">
+    <a href="#como-funciona" class="block text-sm text-muted hover:text-brand">Como funciona</a>
+    <a href="#bundles" class="block text-sm text-muted hover:text-brand">O que inclui</a>
+    <a href="#preco" class="block text-sm text-muted hover:text-brand">Investimento</a>
     <a
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 rounded-full bg-brand-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-800 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-brand-500"
+      class="block rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white text-center hover:bg-brand-dark transition-colors"
     >
-      Falar no WhatsApp
+      Quero meu site
     </a>
   </div>
 </header>
 
 <!-- Spacer for fixed header -->
-<div class="h-16 md:h-18" aria-hidden="true"></div>
+<div class="h-16" aria-hidden="true"></div>
 
 <script>
   const header = document.getElementById('header');
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 10) {
+    if (window.scrollY > 10) {
       header?.classList.add('shadow-md');
     } else {
       header?.classList.remove('shadow-md');
     }
-    lastScroll = currentScroll;
   }, { passive: true });
 </script>

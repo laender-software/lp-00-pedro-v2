@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0c2340" />
+    <meta name="theme-color" content="#0F4C81" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
@@ -26,27 +26,24 @@ const { title, description } = Astro.props;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Self-hosted fonts -->
+    <link rel="preload" href="/fonts/Fraunces-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
 
     <title>{title}</title>
   </head>
-  <body class="bg-neutral-50 text-neutral-800">
+  <body>
     <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
     <slot />
 
-    <!-- Intersection Observer for fade-in animations -->
+    <!-- Intersection Observer for scroll reveal -->
     <script>
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
+              entry.target.classList.add('visible');
               observer.unobserve(entry.target);
             }
           });
@@ -54,8 +51,15 @@ const { title, description } = Astro.props;
         { threshold: 0.1 }
       );
 
-      document.querySelectorAll('.fade-in-section').forEach((el) => {
+      document.querySelectorAll('.reveal, .reveal-up, .reveal-scale').forEach((el) => {
         observer.observe(el);
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      menuToggle?.addEventListener('click', () => {
+        mobileNav?.classList.toggle('hidden');
       });
     </script>
   </body>

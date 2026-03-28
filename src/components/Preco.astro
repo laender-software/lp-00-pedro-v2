@@ -6,53 +6,109 @@ interface Props {
 const { whatsappLink } = Astro.props;
 ---
 
-<section class="py-20 md:py-28 bg-neutral-50 fade-in-section">
-  <div class="mx-auto max-w-2xl px-5 text-center">
-    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 leading-tight">
-      Investimento único
-    </h2>
+<section id="preco" class="py-20 md:py-28 bg-bg-alt reveal">
+  <div class="mx-auto max-w-4xl px-6">
+    <div class="text-center">
+      <span class="text-xs font-semibold uppercase tracking-widest text-accent">Investimento</span>
+      <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
+        Investimento único
+      </h2>
+    </div>
 
-    <div class="mt-10 bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-neutral-100">
-      <p class="text-sm uppercase tracking-widest text-neutral-500 font-semibold">Investimento único</p>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <!-- Card Criação -->
+      <div class="bg-white rounded-2xl p-8 border-2 border-border card-lift reveal">
+        <h3 class="font-serif text-xl font-bold text-text">Criação do site</h3>
+        <p class="mt-4 font-serif text-5xl md:text-6xl font-bold text-brand">R$4.994</p>
+        <p class="mt-2 text-muted">Investimento único. Sem mensalidade.</p>
 
-      <p class="mt-4 font-serif text-5xl md:text-6xl font-bold text-brand-900">
-        R$4.994
-      </p>
+        <div class="mt-6 bg-bg-alt rounded-xl p-5">
+          <p class="font-semibold text-text text-sm">Condição de pagamento:</p>
+          <p class="mt-1 text-muted">Duas parcelas de ~R$2.497 via PIX</p>
+          <div class="mt-2 text-sm text-muted space-y-0.5">
+            <p>1ª no fechamento</p>
+            <p>2ª em 30 dias</p>
+          </div>
+        </div>
 
-      <p class="mt-3 text-neutral-600">
-        Investimento único. Sem mensalidade. Sem surpresas.
-      </p>
+        <ul class="mt-6 space-y-3">
+          <li class="flex items-start gap-2.5 text-muted">
+            <svg class="w-5 h-5 text-brand mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Design exclusivo para sua especialidade</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-muted">
+            <svg class="w-5 h-5 text-brand mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Textos profissionais escritos para você</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-muted">
+            <svg class="w-5 h-5 text-brand mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Domínio próprio incluso</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-muted">
+            <svg class="w-5 h-5 text-brand mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>No ar em 5 dias úteis</span>
+          </li>
+        </ul>
+      </div>
 
-      <div class="mt-6 bg-neutral-50 rounded-xl p-5">
-        <p class="font-semibold text-brand-900 text-sm">Condição de pagamento:</p>
-        <p class="mt-1 text-neutral-600">Duas parcelas de ~R$2.497 via PIX</p>
-        <div class="mt-2 text-sm text-neutral-500 space-y-0.5">
-          <p>1ª no fechamento</p>
-          <p>2ª em 30 dias</p>
+      <!-- Card Manutenção -->
+      <div class="bg-brand rounded-2xl p-8 text-white card-lift reveal">
+        <h3 class="font-serif text-xl font-bold text-white">5 anos de suporte</h3>
+        <p class="mt-4 font-serif text-5xl md:text-6xl font-bold text-white">Incluso</p>
+        <p class="mt-2 text-blue-200">Sem mensalidade. Zero custo adicional.</p>
+
+        <ul class="mt-8 space-y-3">
+          <li class="flex items-start gap-2.5 text-blue-100">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Site mantido funcionando por 5 anos</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-blue-100">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Ajustes de foto, texto, telefone, endereço</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-blue-100">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Monitoramento ativo 24/7</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-blue-100">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Suporte direto via WhatsApp</span>
+          </li>
+        </ul>
+
+        <div class="mt-8 pt-6 border-t border-white/20">
+          <p class="font-semibold">
+            Quantas consultas podem ser fechadas com um site profissional no ar por 5 anos?
+          </p>
         </div>
       </div>
+    </div>
 
-      <div class="mt-8 space-y-3 text-neutral-600">
-        <p class="font-semibold text-brand-900">
-          Quantas consultas podem ser fechadas com um site profissional no ar por 5 anos?
-        </p>
-        <p>Seu site trabalhando por você, 24 horas por dia, 365 dias por ano. Por 5 anos inteiros.</p>
-      </div>
-
-      <p class="mt-6 font-bold text-brand-900">
-        Investimento único. No ar em 5 dias. 5 anos de suporte.
-      </p>
-
-      <div class="mt-8">
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-full bg-brand-900 px-8 py-4 text-base font-bold text-white hover:bg-brand-800 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-brand-500 shadow-lg"
-        >
-          Garantir meu site profissional
-        </a>
-      </div>
+    <div class="mt-12 text-center">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-bold text-white hover:bg-brand-dark transition-colors btn-pulse shadow-lg"
+      >
+        Garantir meu site profissional
+      </a>
     </div>
   </div>
 </section>

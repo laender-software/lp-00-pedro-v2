@@ -6,30 +6,51 @@ interface Props {
 const { whatsappLink } = Astro.props;
 ---
 
-<section class="relative overflow-hidden bg-brand-900 text-white">
-  <!-- Subtle gradient overlay -->
-  <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 opacity-100"></div>
-  <!-- Decorative accent line -->
-  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-500 via-accent-400 to-accent-500"></div>
+<section class="pt-28 pb-20 md:pt-40 md:pb-28 bg-bg-alt">
+  <div class="mx-auto max-w-4xl px-6 text-center">
+    <span class="inline-block rounded-full bg-[#DBEAFE] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand">
+      Especialista em sites para médicos
+    </span>
 
-  <div class="relative mx-auto max-w-4xl px-5 py-20 md:py-28 lg:py-36 text-center">
-    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white">
-      5 dias no ar. 5 anos sem se preocupar.
+    <h1 class="mt-6 font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text leading-tight">
+      <em class="not-italic text-brand">5 dias</em> no ar. 5 anos sem se preocupar.
     </h1>
 
-    <p class="mt-6 md:mt-8 text-lg md:text-xl leading-relaxed text-brand-200 max-w-2xl mx-auto">
-      Site profissional exclusivo para médicos especialistas. Design personalizado, domínio próprio, tudo incluso. Investimento único. Você cuida dos pacientes. Nós cuidamos da sua presença digital.
+    <p class="mt-6 text-lg md:text-xl text-muted leading-relaxed max-w-2xl mx-auto">
+      Site profissional exclusivo para médicos especialistas. Design personalizado, domínio próprio, tudo incluso. Investimento único.
     </p>
 
-    <div class="mt-10">
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-base md:text-lg font-bold text-brand-900 hover:bg-accent-400 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-accent-300 shadow-lg"
+        class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-bold text-white hover:bg-brand-dark transition-colors btn-pulse"
       >
         Quero meu site profissional
       </a>
+      <a
+        href="#como-funciona"
+        class="inline-flex items-center gap-2 rounded-full border-2 border-brand px-8 py-4 text-base font-bold text-brand hover:bg-brand hover:text-white transition-colors"
+      >
+        Como funciona
+      </a>
+    </div>
+
+    <!-- Stats grid -->
+    <div class="mt-16 grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto reveal">
+      <div class="bg-white rounded-2xl p-5 border border-border card-lift">
+        <p class="font-serif text-3xl md:text-4xl font-bold text-brand">5</p>
+        <p class="text-sm text-muted mt-1">dias para ficar pronto</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-border card-lift">
+        <p class="font-serif text-3xl md:text-4xl font-bold text-brand">100+</p>
+        <p class="text-sm text-muted mt-1">nota no Lighthouse</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-border card-lift">
+        <p class="font-serif text-3xl md:text-4xl font-bold text-brand">5</p>
+        <p class="text-sm text-muted mt-1">anos de suporte</p>
+      </div>
     </div>
   </div>
 </section>

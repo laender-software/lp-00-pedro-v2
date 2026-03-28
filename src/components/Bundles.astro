@@ -50,26 +50,29 @@ const bundles = [
 ];
 ---
 
-<section class="py-20 md:py-28 bg-neutral-50 fade-in-section">
-  <div class="mx-auto max-w-5xl px-5">
-    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-900 text-center leading-tight">
-      Tudo o que seu site precisa. Sem você se preocupar com nada.
-    </h2>
+<section id="bundles" class="py-20 md:py-28 bg-bg-alt reveal">
+  <div class="mx-auto max-w-5xl px-6">
+    <div class="text-center">
+      <span class="text-xs font-semibold uppercase tracking-widest text-accent">O que está incluso</span>
+      <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
+        Tudo o que seu site precisa. Sem você se preocupar com nada.
+      </h2>
+    </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 stagger">
       {bundles.map((bundle) => (
-        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow border border-neutral-100 flex flex-col">
+        <div class="bg-white rounded-2xl p-6 md:p-8 border border-border card-lift flex flex-col reveal">
           <div class="flex items-center gap-3 mb-5">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-accent-500 text-brand-900 font-bold text-sm shrink-0">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#DBEAFE] font-serif text-brand font-bold text-sm shrink-0">
               {bundle.number}
             </span>
-            <h3 class="font-semibold text-lg text-brand-900 leading-snug">{bundle.title}</h3>
+            <h3 class="font-semibold text-lg text-text leading-snug">{bundle.title}</h3>
           </div>
 
           <ul class="space-y-3 flex-1">
             {bundle.items.map((item) => (
-              <li class="flex items-start gap-2.5 text-neutral-600">
-                <svg class="w-5 h-5 text-brand-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <li class="flex items-start gap-2.5 text-muted text-sm">
+                <svg class="w-5 h-5 text-brand mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>{item}</span>
@@ -77,12 +80,12 @@ const bundles = [
             ))}
           </ul>
 
-          <div class="mt-5 pt-4 border-t border-neutral-100">
-            <p class="text-sm font-bold text-accent-500">{bundle.highlight}</p>
+          <div class="mt-5 pt-4 border-t border-border">
+            <p class="text-sm font-bold text-accent">{bundle.highlight}</p>
           </div>
 
           {bundle.footer && (
-            <p class="mt-3 text-sm text-neutral-500 italic">{bundle.footer}</p>
+            <p class="mt-3 text-sm text-muted italic">{bundle.footer}</p>
           )}
         </div>
       ))}
