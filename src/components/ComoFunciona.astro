@@ -1,10 +1,4 @@
 ---
-interface Props {
-  whatsappLink: string;
-}
-
-const { whatsappLink } = Astro.props;
-
 const steps = [
   {
     number: "01",
@@ -30,13 +24,11 @@ const steps = [
 ---
 
 <section id="como-funciona" class="py-20 md:py-28 bg-white reveal">
-  <div class="mx-auto max-w-5xl px-6">
-    <div class="text-center">
-      <span class="text-xs font-semibold uppercase tracking-widest text-accent">Processo</span>
-      <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
-        Do briefing ao site no ar. 5 dias úteis.
-      </h2>
-    </div>
+  <div class="mx-auto max-w-4xl px-6">
+    <span class="text-sm font-semibold uppercase tracking-widest text-accent">Processo</span>
+    <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
+      Do briefing ao site no ar. 5 dias úteis.
+    </h2>
 
     <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
       {steps.map((step) => (
@@ -48,15 +40,5 @@ const steps = [
       ))}
     </div>
 
-    <div class="mt-12 text-center">
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-bold text-white hover:bg-brand-dark transition-colors btn-pulse"
-      >
-        Quero começar meu site
-      </a>
-    </div>
   </div>
 </section>

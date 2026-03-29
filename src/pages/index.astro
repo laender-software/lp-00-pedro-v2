@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import ArgumentoCentral from '../components/ArgumentoCentral.astro';
 import Dores from '../components/Dores.astro';
+import Solucao from '../components/Solucao.astro';
 import ComoFunciona from '../components/ComoFunciona.astro';
 import JornadaPaciente from '../components/JornadaPaciente.astro';
 import Bundles from '../components/Bundles.astro';
@@ -21,16 +22,17 @@ const whatsappLink = "https://wa.me/5531936183611?text=Olá! Quero saber mais so
 ---
 
 <Layout
-  title="Site Profissional para Médicos — Laender Software"
-  description="Site profissional exclusivo para médicos especialistas. Design personalizado, domínio próprio, tudo incluso. No ar em 5 dias, 5 anos de suporte."
+  title="Seu site profissional no ar em 5 dias — Pedro Laender"
+  description="Sites modernos, rápidos e que convertem pacientes em consultas. Sem enrolação, sem agência cara, sem esperar 30 dias. Investimento único."
 >
   <Header whatsappLink="https://wa.me/5531936183611?text=Olá! Gostaria de saber mais." />
 
   <main id="main-content">
     <Hero whatsappLink={whatsappLink} />
-    <ArgumentoCentral whatsappLink="https://wa.me/5531936183611?text=Olá! Quero meu site profissional." />
-    <Dores whatsappLink="https://wa.me/5531936183611?text=Olá! Quero resolver meu site profissional." />
-    <ComoFunciona whatsappLink="https://wa.me/5531936183611?text=Olá! Quero começar meu site profissional." />
+    <ArgumentoCentral />
+    <Dores />
+    <Solucao />
+    <ComoFunciona />
     <JornadaPaciente />
     <Bundles />
     <Bonus />

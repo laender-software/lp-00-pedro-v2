@@ -1,10 +1,4 @@
 ---
-interface Props {
-  whatsappLink: string;
-}
-
-const { whatsappLink } = Astro.props;
-
 const dores = [
   {
     icon: "🔍",
@@ -12,14 +6,9 @@ const dores = [
     text: "Quem não é visto não é lembrado. A percepção sobre você começa antes da primeira consulta.",
   },
   {
-    icon: "📱",
-    title: "Instagram mostra o dia a dia. O site mostra quem você é.",
-    text: "Sua história, sua formação, seus diferenciais — quando alguém quer saber de verdade, é o site que responde.",
-  },
-  {
     icon: "⏰",
     title: "Você sabe que precisa resolver isso, mas a rotina não permite",
-    text: "Reuniões com agência, aprovações intermináveis, semanas de espera. Briefing de 10-15 minutos. Isso é tudo o que precisamos.",
+    text: "Reuniões com agência, aprovações intermináveis, semanas de espera. A rotina não permite.",
   },
   {
     icon: "🏥",
@@ -28,22 +17,20 @@ const dores = [
   },
   {
     icon: "💻",
-    title: "Já tentou agência, sobrinho ou template — nenhum ficou à altura",
-    text: "Site genérico diminui sua autoridade. Você merece algo feito para quem você é.",
+    title: "Já tentou agência, sobrinho ou template, nenhum ficou à altura",
+    text: "Site genérico passa a impressão errada sobre você.",
   },
 ];
 ---
 
 <section class="py-20 md:py-28 bg-bg-alt reveal">
   <div class="mx-auto max-w-4xl px-6">
-    <div class="text-center">
-      <span class="text-xs font-semibold uppercase tracking-widest text-accent">Você se identifica?</span>
-      <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
-        Você é referência na sua especialidade. Seu digital deveria mostrar isso.
-      </h2>
-    </div>
+    <span class="text-sm font-semibold uppercase tracking-widest text-accent">Você se identifica?</span>
+    <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
+      Você é referência na sua especialidade. Seu site precisa mostrar isso.
+    </h2>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 stagger">
       {dores.map((dor) => (
         <div class="bg-white rounded-2xl p-6 border border-border card-lift reveal">
           <span class="text-2xl" aria-hidden="true">{dor.icon}</span>
@@ -53,15 +40,5 @@ const dores = [
       ))}
     </div>
 
-    <div class="mt-12 text-center">
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-bold text-white hover:bg-brand-dark transition-colors btn-pulse"
-      >
-        Começar em 10 minutos
-      </a>
-    </div>
   </div>
 </section>

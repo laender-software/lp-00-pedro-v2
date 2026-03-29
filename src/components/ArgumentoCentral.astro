@@ -1,20 +1,15 @@
 ---
-interface Props {
-  whatsappLink: string;
-}
-
-const { whatsappLink } = Astro.props;
 ---
 
 <section class="py-20 md:py-28 bg-white reveal">
-  <div class="mx-auto max-w-3xl px-6 text-center">
-    <span class="text-xs font-semibold uppercase tracking-widest text-accent">Por que um site?</span>
+  <div class="mx-auto max-w-4xl px-6">
+    <span class="text-sm font-semibold uppercase tracking-widest text-accent">Por que um site?</span>
 
     <h2 class="mt-4 font-serif text-3xl md:text-4xl font-bold text-text leading-tight">
       Sua presença digital é como as pessoas te percebem antes de te conhecer.
     </h2>
 
-    <div class="mt-8 space-y-5 text-lg md:text-xl text-muted leading-relaxed">
+    <div class="mt-8 space-y-5 text-lg md:text-xl text-text/80 leading-relaxed">
       <p>
         Instagram mostra o dia a dia. Mas quando alguém pesquisa seu nome, é o site que transmite autoridade.
       </p>
@@ -26,15 +21,5 @@ const { whatsappLink } = Astro.props;
       </p>
     </div>
 
-    <div class="mt-10">
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-bold text-white hover:bg-brand-dark transition-colors btn-pulse"
-      >
-        Começar agora
-      </a>
-    </div>
   </div>
 </section>
