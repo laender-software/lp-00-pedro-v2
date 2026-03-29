@@ -57,11 +57,18 @@ const { whatsappLink } = Astro.props;
 
 <script>
   const header = document.getElementById('header');
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header?.classList.add('shadow-md');
-    } else {
-      header?.classList.remove('shadow-md');
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 10) {
+          header?.classList.add('shadow-md');
+        } else {
+          header?.classList.remove('shadow-md');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }, { passive: true });
 </script>
