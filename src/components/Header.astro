@@ -1,9 +1,4 @@
 ---
-interface Props {
-  whatsappLink: string;
-}
-
-const { whatsappLink } = Astro.props;
 ---
 
 <header
@@ -19,9 +14,7 @@ const { whatsappLink } = Astro.props;
       <a href="#como-funciona" class="text-sm text-muted hover:text-brand transition-colors">Processo</a>
       <a href="#preco" class="text-sm text-muted hover:text-brand transition-colors">Investimento</a>
       <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#preco"
         class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark transition-colors btn-pulse"
       >
         Quero meu site
@@ -42,9 +35,7 @@ const { whatsappLink } = Astro.props;
     <a href="#como-funciona" class="block text-sm text-muted hover:text-brand">Processo</a>
     <a href="#preco" class="block text-sm text-muted hover:text-brand">Investimento</a>
     <a
-      href={whatsappLink}
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#preco"
       class="block rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white text-center hover:bg-brand-dark transition-colors"
     >
       Quero meu site

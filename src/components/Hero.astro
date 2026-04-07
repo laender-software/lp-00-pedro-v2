@@ -1,9 +1,4 @@
 ---
-interface Props {
-  whatsappLink: string;
-}
-
-const { whatsappLink } = Astro.props;
 ---
 
 <section class="pt-28 pb-20 md:pt-40 md:pb-28 bg-bg-alt">
@@ -22,9 +17,7 @@ const { whatsappLink } = Astro.props;
 
     <div class="mt-10">
       <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#preco"
         class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-bold text-white hover:bg-brand-dark transition-colors btn-pulse"
       >
         Quero meu site profissional
